@@ -1,0 +1,93 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family:  font-family 'Kumbh Sans', sans-serif;
+  }
+ 
+  body {
+    background-color:  #f3eae3;
+   
+}
+
+.FlexContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 65%;
+    background-color: #f3eae3;
+    height: 80vh;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.FlexContainer div {
+    width: 250px;
+    height: 450px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.profile-pic{width: 250px;
+    height: 450px;
+    margin: 0px;
+    border-radius: 15px;}
+
+    .button {
+        /* Stylizacja guzika */
+        background-color: #3d8168; /* Przykład */
+        color: white; /* Przykład */
+        border: 0;
+        border-radius: 6px; /* Zaokrąglenie guzika */
+        padding: 10px 20px; /* Przykład */
+        font-weight: bold;
+        margin-bottom: 20px; /* Odstęp od tekstu poniżej */
+        width: 85%; /* Możesz określić szerokość jako procentową, aby były węższe */
+        margin-left: auto; /* Wyśrodkowanie guzika w pojemniku */
+        margin-right: auto; /* Wyśrodkowanie guzika w pojemniku */
+        display: block; /* Zapewnienie, że marginy auto zadziałają */
+        text-decoration: none; /* Usunięcie podkreślenia */
+        text-align: center; /* Wyśrodkowanie tekstu */
+      }   
+
+      .age{color: #3d8168;}
+
+      .age2{
+        color:gray;
+        font-size: 12px;
+        text-decoration: line-through;
+        vertical-align: super; 
+        
+      }
+     .price {
+        margin-left:15px;
+        margin-bottom:35px;
+     }    
+     h1{
+        color:gray;
+        font-size: 12px;
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+     } 
+     h4 {
+        font-size: 24px;
+        margin-left: 15px;
+        margin-bottom:15px;
+     }
+
+
+     p{
+        color:gray;
+        margin-left: 15px;
+        margin-bottom:55px;
+     }
+         
