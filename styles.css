@@ -31,15 +31,15 @@
 .FlexContainer div {
     width: 250px;
     height: 450px;
-    margin: 5px;
+    margin: 0;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 0 15px 15px 0;
 }
 
 .profile-pic{width: 250px;
     height: 450px;
     margin: 0px;
-    border-radius: 15px;}
+    border-radius: 15px 0 0 15px;}
 
     .button {
         /* Stylizacja guzika */
