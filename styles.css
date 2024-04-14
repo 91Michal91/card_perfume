@@ -1,93 +1,122 @@
-/* styles.css */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    height: 100%;
-    font-family:  font-family 'Kumbh Sans', sans-serif;
-  }
- 
-  body {
-    background-color:  #f3eae3;
-   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3eae3;
 }
 
 .FlexContainer {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 65%;
-    background-color: #f3eae3;
-    height: 80vh;
-    overflow: auto;
-    flex-direction: row;
+  display: flex;
+  flex-wrap: wrap; /* Pozwala na opływanie na mniejszych ekranach */
+  justify-content: center;
+  align-items: stretch; /* Rozciąga dzieci, aby wypełniły dostępną przestrzeń */
+  max-width: 450px;
+  width: 90%; /* Zmniejsza szerokość na mniejszych ekranach */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
 .FlexContainer div {
-    width: 250px;
-    height: 450px;
-    margin: 0;
-    background-color: white;
-    border-radius: 0 15px 15px 0;
+  flex-basis: 50%; /* Daje obu divom po 50% szerokości */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
 }
 
-.profile-pic{width: 250px;
-    height: 450px;
-    margin: 0px;
-    border-radius: 15px 0 0 15px;}
+.profile-pic {
+  width: 100%;
+  height: 100%; /* Zapewnia, że obrazek zachowuje proporcje */
+  border-radius: 15px 0 0 15px; /* Zaokrąglenie tylko dla lewego górnego i dolnego rogu */
+  object-fit: cover;
+}
 
-    .button {
-        /* Stylizacja guzika */
-        background-color: #3d8168; /* Przykład */
-        color: white; /* Przykład */
-        border: 0;
-        border-radius: 6px; /* Zaokrąglenie guzika */
-        padding: 10px 20px; /* Przykład */
-        font-weight: bold;
-        margin-bottom: 20px; /* Odstęp od tekstu poniżej */
-        width: 85%; /* Możesz określić szerokość jako procentową, aby były węższe */
-        margin-left: auto; /* Wyśrodkowanie guzika w pojemniku */
-        margin-right: auto; /* Wyśrodkowanie guzika w pojemniku */
-        display: block; /* Zapewnienie, że marginy auto zadziałają */
-        text-decoration: none; /* Usunięcie podkreślenia */
-        text-align: center; /* Wyśrodkowanie tekstu */
-      }   
+@media (max-width: 768px) {
+  .FlexContainer {
+      flex-direction: column; /* Układa elementy w pionie na ekranach mobilnych */
+  }
+  
+  .FlexContainer div {
+      flex-basis: auto; /* Automatycznie dostosowuje rozmiar na ekranach mobilnych */
+  }
+  
+  .profile-pic {
+      border-radius: 15px 15px 0 0; /* Zaokrąglenie górnych rogów dla obrazu */
+  }
+}
 
-      .age{color: #3d8168;}
+/* Reszta stylów */
+.button {
+  background-color: #3d8168;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: calc(100% - 40px); /* Odejmuje padding od szerokości */
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-left:15px;
+}
 
-      .age2{
-        color:gray;
-        font-size: 12px;
-        text-decoration: line-through;
-        vertical-align: super; 
-        
-      }
-     .price {
-        margin-left:15px;
-        margin-bottom:35px;
-     }    
-     h1{
-        color:gray;
-        font-size: 12px;
-        margin-top: 15px;
-        margin-left: 15px;
-        margin-bottom: 15px;
-     } 
-     h4 {
-        font-size: 24px;
-        margin-left: 15px;
-        margin-bottom:15px;
-     }
+.age {
+  color: #3d8168;
+}
 
+.age2 {
+  color: gray;
+  font-size: 12px;
+  text-decoration: line-through;
+  vertical-align: super;
+}
 
-     p{
-        color:gray;
-        margin-left: 15px;
-        margin-bottom:55px;
-     }
-         
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Dodaje odstęp między cenami */
+  margin-bottom: 35px;
+  margin-left:15px;
+}
+h4{
+  color:black;
+  
+}
+
+h1, p {
+  color: gray;
+}
+
+h1 {
+  margin-top:10px;
+  font-size: 18px; /* Zwiększenie dla lepszej czytelności */
+  margin-bottom: 15px;
+  margin-left:15px;
+}
+
+h4 {
+  font-size: 26px; /* Zwiększenie dla lepszej czytelności */
+  margin-bottom: 15px;
+  margin-left:15px;
+}
+
+p {
+  margin-bottom: 35px; /* Zwiększenie odstępu od dolnego elementu */
+  margin-left:15px;
+  margin-top:25px;
+}
