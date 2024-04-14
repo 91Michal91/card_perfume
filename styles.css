@@ -120,3 +120,19 @@ p {
   margin-left:15px;
   margin-top:25px;
 }
+.button {
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f0e68c; /* Złocisty kolor jako przykład */
+}
+/* Styl dla całej strony (domyślna czcionka Montserrat) */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Styl tylko dla elementów h4 (czcionka Fraunces) */
+h4 {
+  font-family: 'Fraunces', serif;
+}
